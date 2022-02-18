@@ -1,12 +1,12 @@
 const checkPalindrome = (str) => {
   const reverse = str
     .toLowerCase()
-    .replace(/\W/g, "")
+    .replace(/[\W_]/g, "")
     .split("")
     .reverse()
     .join("");
 
-  if (str.toLowerCase().replace(/\W/g, "") === reverse) {
+  if (str.toLowerCase().replace(/[\W_]/g, "") === reverse) {
     return true;
   }
   return false;
